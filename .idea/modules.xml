@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/ML-From-Scratch.iml" filepath="$PROJECT_DIR$/.idea/ML-From-Scratch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mlfromscratch-python/mlfromscratch-python.iml" filepath="$PROJECT_DIR$/mlfromscratch-python/mlfromscratch-python.iml" />
     </modules>
   </component>
 </project>
