@@ -1,11 +1,13 @@
 from __future__ import print_function
+
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+
 # Import helper functions
 from mlfromscratch.supervised_learning import PolynomialRidgeRegression
-from mlfromscratch.utils import k_fold_cross_validation_sets, normalize, Plot
-from mlfromscratch.utils import train_test_split, polynomial_features, mean_squared_error
+from mlfromscratch.utils import k_fold_cross_validation_sets
+from mlfromscratch.utils import train_test_split, mean_squared_error
 
 
 def main():

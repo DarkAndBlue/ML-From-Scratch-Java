@@ -1,6 +1,6 @@
 from __future__ import division, print_function
+
 from sklearn import datasets
-import numpy as np
 
 from mlfromscratch.unsupervised_learning import KMeans
 from mlfromscratch.utils import Plot

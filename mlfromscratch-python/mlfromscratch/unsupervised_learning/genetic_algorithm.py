@@ -1,6 +1,9 @@
 from __future__ import print_function, division
+
 import string
+
 import numpy as np
+
 
 class GeneticAlgorithm():
     """An implementation of a Genetic Algorithm which will try to produce the user
@@ -96,9 +99,3 @@ class GeneticAlgorithm():
             self.population = new_population
 
         print ("[%d Answer: '%s']" % (epoch, fittest_individual))
-
-
-
-
-
-

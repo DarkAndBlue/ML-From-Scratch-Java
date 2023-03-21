@@ -1,7 +1,8 @@
 from __future__ import print_function, division
+
 import numpy as np
-from mlfromscratch.utils import normalize, euclidean_distance, Plot
-from mlfromscratch.unsupervised_learning import PCA
+
+from mlfromscratch.utils import euclidean_distance
 
 
 class PAM():
@@ -120,4 +121,3 @@ class PAM():
         final_clusters = self._create_clusters(X, medoids)
         # Return the samples cluster indices as labels
         return self._get_cluster_labels(final_clusters, X)
-

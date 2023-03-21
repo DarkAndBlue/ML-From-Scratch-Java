@@ -1,8 +1,10 @@
 from __future__ import division, print_function
+
 import numpy as np
 
-from mlfromscratch.utils import divide_on_feature, train_test_split, standardize, mean_squared_error
-from mlfromscratch.utils import calculate_entropy, accuracy_score, calculate_variance
+from mlfromscratch.utils import calculate_entropy, calculate_variance
+from mlfromscratch.utils import divide_on_feature
+
 
 class DecisionNode():
     """Class that represents a decision node or leaf in the decision tree

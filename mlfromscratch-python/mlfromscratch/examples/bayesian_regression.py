@@ -1,11 +1,12 @@
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 
+from mlfromscratch.supervised_learning import BayesianRegression
+from mlfromscratch.utils.data_manipulation import train_test_split
 # Import helper functions
 from mlfromscratch.utils.data_operation import mean_squared_error
-from mlfromscratch.utils.data_manipulation import train_test_split, polynomial_features
-from mlfromscratch.supervised_learning import BayesianRegression
+
 
 def main():
 

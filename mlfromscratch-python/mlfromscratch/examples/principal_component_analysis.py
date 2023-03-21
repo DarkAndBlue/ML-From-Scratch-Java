@@ -1,9 +1,9 @@
-from sklearn import datasets
 import matplotlib.pyplot as plt
-import matplotlib.cm as cmx
-import matplotlib.colors as colors
 import numpy as np
+from sklearn import datasets
+
 from mlfromscratch.unsupervised_learning import PCA
+
 
 def main():
 

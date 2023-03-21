@@ -1,11 +1,13 @@
 from __future__ import print_function
+
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+
 # Import helper functions
 from mlfromscratch.supervised_learning import ElasticNet
-from mlfromscratch.utils import k_fold_cross_validation_sets, normalize, mean_squared_error
-from mlfromscratch.utils import train_test_split, polynomial_features, Plot
+from mlfromscratch.utils import mean_squared_error
+from mlfromscratch.utils import train_test_split
 
 
 def main():

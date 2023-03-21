@@ -1,7 +1,9 @@
 from __future__ import print_function, division
+
 import numpy as np
-from mlfromscratch.utils import normalize, euclidean_distance, Plot
-from mlfromscratch.unsupervised_learning import *
+
+from mlfromscratch.utils import euclidean_distance
+
 
 class KMeans():
     """A simple clustering method that forms k clusters by iteratively reassigning
@@ -88,4 +90,3 @@ class KMeans():
                 break
 
         return self._get_cluster_labels(clusters, X)
-

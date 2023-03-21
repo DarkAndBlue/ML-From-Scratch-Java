@@ -1,11 +1,11 @@
-import numpy as np
-import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
 from sklearn.datasets import make_regression
 
-from mlfromscratch.utils import train_test_split, polynomial_features
-from mlfromscratch.utils import mean_squared_error, Plot
 from mlfromscratch.supervised_learning import LinearRegression
+from mlfromscratch.utils import mean_squared_error
+from mlfromscratch.utils import train_test_split
+
 
 def main():
 

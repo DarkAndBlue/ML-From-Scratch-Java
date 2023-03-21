@@ -1,13 +1,12 @@
 from __future__ import division, print_function
-import numpy as np
-from sklearn import datasets
-import matplotlib.pyplot as plt
 
+from sklearn import datasets
+
+from mlfromscratch.supervised_learning import GradientBoostingClassifier
+from mlfromscratch.utils import Plot
 # Import helper functions
 from mlfromscratch.utils import train_test_split, accuracy_score
-from mlfromscratch.deep_learning.loss_functions import CrossEntropy
-from mlfromscratch.utils import Plot
-from mlfromscratch.supervised_learning import GradientBoostingClassifier
+
 
 def main():
 

@@ -1,11 +1,13 @@
 from __future__ import division, print_function
-import numpy as np
+
 import matplotlib.pyplot as plt
+import numpy as np
 import pandas as pd
 
-from mlfromscratch.utils import train_test_split, standardize, accuracy_score
-from mlfromscratch.utils import mean_squared_error, calculate_variance, Plot
 from mlfromscratch.supervised_learning import RegressionTree
+from mlfromscratch.utils import mean_squared_error
+from mlfromscratch.utils import train_test_split, standardize
+
 
 def main():
 

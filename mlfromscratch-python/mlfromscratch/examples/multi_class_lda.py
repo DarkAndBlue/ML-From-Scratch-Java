@@ -1,9 +1,10 @@
 from __future__ import print_function
+
 from sklearn import datasets
-import numpy as np
 
 from mlfromscratch.supervised_learning import MultiClassLDA
 from mlfromscratch.utils import normalize
+
 
 def main():
     # Load the dataset

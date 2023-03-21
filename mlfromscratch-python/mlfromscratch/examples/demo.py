@@ -1,19 +1,16 @@
 from __future__ import print_function
-from sklearn import datasets
-import numpy as np
-import math
+
 import matplotlib.pyplot as plt
+from sklearn import datasets
 
-from mlfromscratch.utils import train_test_split, normalize, to_categorical, accuracy_score
-from mlfromscratch.deep_learning.optimizers import Adam
-from mlfromscratch.deep_learning.loss_functions import CrossEntropy
-from mlfromscratch.deep_learning.activation_functions import Softmax
-from mlfromscratch.utils.kernels import *
-from mlfromscratch.supervised_learning import *
 from mlfromscratch.deep_learning import *
+from mlfromscratch.deep_learning.layers import Dense, Activation
+from mlfromscratch.deep_learning.loss_functions import CrossEntropy
+from mlfromscratch.deep_learning.optimizers import Adam
+from mlfromscratch.supervised_learning import *
 from mlfromscratch.unsupervised_learning import PCA
-from mlfromscratch.deep_learning.layers import Dense, Dropout, Conv2D, Flatten, Activation
-
+from mlfromscratch.utils import train_test_split, normalize, to_categorical, accuracy_score
+from mlfromscratch.utils.kernels import *
 
 print ("+-------------------------------------------+")
 print ("|                                           |")
@@ -143,5 +140,3 @@ plt.ylabel("Principal Component 2")
 plt.xlabel("Principal Component 1")
 plt.title("The Digit Dataset (digits %s and %s)" % (digit1, digit2))
 plt.show()
-
-

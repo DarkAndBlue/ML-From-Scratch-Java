@@ -1,11 +1,14 @@
 from __future__ import print_function, division
-import numpy as np
+
 import math
+
+import numpy as np
 from sklearn import datasets
 
-from mlfromscratch.utils import train_test_split, to_categorical, normalize, accuracy_score, Plot
 from mlfromscratch.deep_learning.activation_functions import Sigmoid, Softmax
 from mlfromscratch.deep_learning.loss_functions import CrossEntropy
+from mlfromscratch.utils import train_test_split, to_categorical, normalize, accuracy_score, Plot
+
 
 class MultilayerPerceptron():
     """Multilayer Perceptron classifier. A fully-connected neural network with one hidden layer.

@@ -1,13 +1,8 @@
-import progressbar
-from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
-import matplotlib.cm as cmx
-import matplotlib.colors as colors
 import numpy as np
+import progressbar
 
 from mlfromscratch.utils.data_operation import calculate_covariance_matrix
-from mlfromscratch.utils.data_operation import calculate_correlation_matrix
-from mlfromscratch.utils.data_manipulation import standardize
 
 bar_widgets = [
     'Training: ', progressbar.Percentage(), ' ', progressbar.Bar(marker="-", left="[", right="]"),
@@ -110,5 +105,3 @@ class Plot():
         ax = fig.add_subplot(111, projection='3d')
         ax.scatter(x1, x2, x3, c=y)
         plt.show()
-
-

@@ -1,6 +1,8 @@
 from __future__ import division, print_function
-import numpy as np
+
 import itertools
+
+import numpy as np
 
 
 class Rule():
@@ -187,4 +189,3 @@ class Apriori():
             rules += self._rules_from_itemset(itemset, itemset)
         # Remove empty values
         return rules
-

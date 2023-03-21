@@ -1,16 +1,13 @@
 from __future__ import print_function, division
-from sklearn import datasets
-import math
+
 import matplotlib.pyplot as plt
 import numpy as np
-import progressbar
-
 from sklearn.datasets import fetch_mldata
 
-from mlfromscratch.deep_learning.optimizers import Adam
-from mlfromscratch.deep_learning.loss_functions import CrossEntropy
-from mlfromscratch.deep_learning.layers import Dense, Dropout, Flatten, Activation, Reshape, BatchNormalization
 from mlfromscratch.deep_learning import NeuralNetwork
+from mlfromscratch.deep_learning.layers import Dense, Dropout, Activation, BatchNormalization
+from mlfromscratch.deep_learning.loss_functions import CrossEntropy
+from mlfromscratch.deep_learning.optimizers import Adam
 
 
 class GAN():
@@ -164,5 +161,3 @@ class GAN():
 if __name__ == '__main__':
     gan = GAN()
     gan.train(n_epochs=200000, batch_size=64, save_interval=400)
-
-

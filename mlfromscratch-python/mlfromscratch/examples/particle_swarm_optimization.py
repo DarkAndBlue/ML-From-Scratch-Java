@@ -1,15 +1,16 @@
 
 from __future__ import print_function
-from sklearn import datasets
-import matplotlib.pyplot as plt
-import numpy as np
 
-from mlfromscratch.supervised_learning import ParticleSwarmOptimizedNN
-from mlfromscratch.utils import train_test_split, to_categorical, normalize, Plot
+import numpy as np
+from sklearn import datasets
+
 from mlfromscratch.deep_learning import NeuralNetwork
 from mlfromscratch.deep_learning.layers import Activation, Dense
 from mlfromscratch.deep_learning.loss_functions import CrossEntropy
 from mlfromscratch.deep_learning.optimizers import Adam
+from mlfromscratch.supervised_learning import ParticleSwarmOptimizedNN
+from mlfromscratch.utils import train_test_split, to_categorical, normalize, Plot
+
 
 def main():
 

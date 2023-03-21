@@ -1,7 +1,9 @@
 from __future__ import division, print_function
+
 import numpy as np
 
 from mlfromscratch.unsupervised_learning import Apriori
+
 
 def main():
     # Demo transaction set

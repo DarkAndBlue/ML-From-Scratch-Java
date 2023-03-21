@@ -1,13 +1,12 @@
 from __future__ import print_function
-from sklearn import datasets
-import numpy as np
-import matplotlib.pyplot as plt
 
-# Import helper functions
-from mlfromscratch.utils import make_diagonal, normalize, train_test_split, accuracy_score
-from mlfromscratch.deep_learning.activation_functions import Sigmoid
-from mlfromscratch.utils import Plot
+from sklearn import datasets
+
 from mlfromscratch.supervised_learning import LogisticRegression
+from mlfromscratch.utils import Plot
+# Import helper functions
+from mlfromscratch.utils import normalize, train_test_split, accuracy_score
+
 
 def main():
     # Load dataset

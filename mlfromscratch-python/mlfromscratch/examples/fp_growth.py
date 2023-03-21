@@ -1,6 +1,8 @@
 
 import numpy as np
+
 from mlfromscratch.unsupervised_learning import FPGrowth
+
 
 def main():
     # Demo transaction set

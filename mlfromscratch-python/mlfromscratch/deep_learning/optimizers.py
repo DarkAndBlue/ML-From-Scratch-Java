@@ -1,5 +1,5 @@
 import numpy as np
-from mlfromscratch.utils import make_diagonal, normalize
+
 
 # Optimizers for models that use gradient based methods for finding the 
 # weights that minimizes the loss.
@@ -128,6 +128,3 @@ class Adam():
         self.w_updt = self.learning_rate * m_hat / (np.sqrt(v_hat) + self.eps)
 
         return w - self.w_updt
-
-
-

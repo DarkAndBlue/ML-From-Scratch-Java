@@ -1,12 +1,14 @@
 from __future__ import division, print_function
+
 import numpy as np
 from sklearn import datasets
 
 # Import helper functions
 from mlfromscratch.supervised_learning import Adaboost
+from mlfromscratch.utils import Plot
 from mlfromscratch.utils.data_manipulation import train_test_split
 from mlfromscratch.utils.data_operation import accuracy_score
-from mlfromscratch.utils import Plot
+
 
 def main():
     data = datasets.load_digits()

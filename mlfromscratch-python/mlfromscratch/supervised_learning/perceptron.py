@@ -1,14 +1,15 @@
 from __future__ import print_function, division
+
 import math
+
 import numpy as np
+import progressbar
 
 # Import helper functions
-from mlfromscratch.utils import train_test_split, to_categorical, normalize, accuracy_score
-from mlfromscratch.deep_learning.activation_functions import Sigmoid, ReLU, SoftPlus, Swish, LeakyReLU, TanH, ELU
-from mlfromscratch.deep_learning.loss_functions import CrossEntropy, SquareLoss
-from mlfromscratch.utils import Plot
+from mlfromscratch.deep_learning.activation_functions import Sigmoid
+from mlfromscratch.deep_learning.loss_functions import SquareLoss
 from mlfromscratch.utils.misc import bar_widgets
-import progressbar
+
 
 class Perceptron():
     """The Perceptron. One layer neural network classifier.

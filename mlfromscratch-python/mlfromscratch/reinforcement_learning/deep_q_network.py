@@ -1,8 +1,9 @@
 from __future__ import print_function, division
+
 import random
-import numpy as np
+
 import gym
-from collections import deque
+import numpy as np
 
 
 class DeepQNetwork():

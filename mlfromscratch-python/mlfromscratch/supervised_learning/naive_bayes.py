@@ -1,8 +1,9 @@
 from __future__ import division, print_function
-import numpy as np
+
 import math
-from mlfromscratch.utils import train_test_split, normalize
-from mlfromscratch.utils import Plot, accuracy_score
+
+import numpy as np
+
 
 class NaiveBayes():
     """The Gaussian Naive Bayes classifier. """
@@ -100,4 +101,3 @@ class BernoulliNaiveBayes:
             posterior = log_prior + log_likelihood
             posteriors.append(posterior)
         return self.classes[np.argmax(posteriors)]     
-    

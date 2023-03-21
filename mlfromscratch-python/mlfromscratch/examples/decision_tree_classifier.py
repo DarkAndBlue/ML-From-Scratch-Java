@@ -1,14 +1,12 @@
 from __future__ import division, print_function
-import numpy as np
-from sklearn import datasets
-import matplotlib.pyplot as plt
-import sys
-import os
 
-# Import helper functions
-from mlfromscratch.utils import train_test_split, standardize, accuracy_score
-from mlfromscratch.utils import mean_squared_error, calculate_variance, Plot
+from sklearn import datasets
+
 from mlfromscratch.supervised_learning import ClassificationTree
+from mlfromscratch.utils import Plot
+# Import helper functions
+from mlfromscratch.utils import train_test_split, accuracy_score
+
 
 def main():
 

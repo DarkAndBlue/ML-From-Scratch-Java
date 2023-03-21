@@ -1,8 +1,10 @@
 from __future__ import division, print_function
+
 from sklearn import datasets
-import numpy as np
-from mlfromscratch.utils import train_test_split, normalize, accuracy_score, Plot
+
 from mlfromscratch.supervised_learning import NaiveBayes
+from mlfromscratch.utils import train_test_split, normalize, accuracy_score, Plot
+
 
 def main():
     data = datasets.load_digits()

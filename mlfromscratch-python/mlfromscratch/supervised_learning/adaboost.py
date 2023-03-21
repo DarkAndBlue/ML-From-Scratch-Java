@@ -1,12 +1,13 @@
 from __future__ import division, print_function
-import numpy as np
+
 import math
+
+import numpy as np
 from sklearn import datasets
-import matplotlib.pyplot as plt
-import pandas as pd
 
 # Import helper functions
 from mlfromscratch.utils import train_test_split, accuracy_score, Plot
+
 
 # Decision stump used as weak classifier in this impl. of Adaboost
 class DecisionStump():

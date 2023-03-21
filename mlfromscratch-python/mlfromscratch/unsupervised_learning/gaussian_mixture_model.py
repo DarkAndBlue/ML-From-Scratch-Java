@@ -1,10 +1,10 @@
 from __future__ import division, print_function
+
 import math
-from sklearn import datasets
+
 import numpy as np
 
-from mlfromscratch.utils import normalize, euclidean_distance, calculate_covariance_matrix
-from mlfromscratch.utils import Plot
+from mlfromscratch.utils import calculate_covariance_matrix
 
 
 class GaussianMixtureModel():

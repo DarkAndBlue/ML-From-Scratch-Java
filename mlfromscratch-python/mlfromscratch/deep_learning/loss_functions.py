@@ -1,7 +1,9 @@
 from __future__ import division
+
 import numpy as np
+
 from mlfromscratch.utils import accuracy_score
-from mlfromscratch.deep_learning.activation_functions import Sigmoid
+
 
 class Loss(object):
     def loss(self, y_true, y_pred):
@@ -37,5 +39,3 @@ class CrossEntropy(Loss):
         # Avoid division by zero
         p = np.clip(p, 1e-15, 1 - 1e-15)
         return - (y / p) + (1 - y) / (1 - p)
-
-

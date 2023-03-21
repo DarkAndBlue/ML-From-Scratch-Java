@@ -1,7 +1,8 @@
 from __future__ import division
-import numpy as np
+
 import math
-import sys
+
+import numpy as np
 
 
 def calculate_entropy(y):

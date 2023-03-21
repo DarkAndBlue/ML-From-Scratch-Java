@@ -1,13 +1,14 @@
 from __future__ import print_function, division
+
 import matplotlib.pyplot as plt
 import numpy as np
-import progressbar
 from sklearn.datasets import fetch_mldata
 
-from mlfromscratch.deep_learning.optimizers import Adam
-from mlfromscratch.deep_learning.loss_functions import CrossEntropy
-from mlfromscratch.deep_learning.layers import Dense, Dropout, Flatten, Activation, Reshape, BatchNormalization, ZeroPadding2D, Conv2D, UpSampling2D
 from mlfromscratch.deep_learning import NeuralNetwork
+from mlfromscratch.deep_learning.layers import Dense, Dropout, Flatten, Activation, Reshape, BatchNormalization, \
+    ZeroPadding2D, Conv2D, UpSampling2D
+from mlfromscratch.deep_learning.loss_functions import CrossEntropy
+from mlfromscratch.deep_learning.optimizers import Adam
 
 
 class DCGAN():
@@ -169,5 +170,3 @@ class DCGAN():
 if __name__ == '__main__':
     dcgan = DCGAN()
     dcgan.train(epochs=200000, batch_size=64, save_interval=50)
-
-

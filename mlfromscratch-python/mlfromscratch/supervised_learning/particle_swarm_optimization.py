@@ -1,6 +1,9 @@
 from __future__ import print_function, division
-import numpy as np
+
 import copy
+
+import numpy as np
+
 
 class ParticleSwarmOptimizedNN():
     """ Particle Swarm Optimization of Neural Network.
@@ -126,4 +129,3 @@ class ParticleSwarmOptimizedNN():
                                                                             self.best_individual.fitness,
                                                                             100*float(self.best_individual.accuracy)))
         return self.best_individual
-

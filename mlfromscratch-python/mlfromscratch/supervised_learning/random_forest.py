@@ -1,15 +1,14 @@
 from __future__ import division, print_function
-import numpy as np
+
 import math
+
+import numpy as np
 import progressbar
 
-# Import helper functions
-from mlfromscratch.utils import divide_on_feature, train_test_split, get_random_subsets, normalize
-from mlfromscratch.utils import accuracy_score, calculate_entropy
-from mlfromscratch.unsupervised_learning import PCA
 from mlfromscratch.supervised_learning import ClassificationTree
+# Import helper functions
+from mlfromscratch.utils import get_random_subsets
 from mlfromscratch.utils.misc import bar_widgets
-from mlfromscratch.utils import Plot
 
 
 class RandomForest():

@@ -1,10 +1,6 @@
 from __future__ import division, print_function
-import sys
-import os
-import math
-import random
+
 from sklearn import datasets
-import numpy as np
 
 from mlfromscratch.unsupervised_learning import GaussianMixtureModel
 from mlfromscratch.utils import Plot

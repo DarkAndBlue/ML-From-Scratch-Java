@@ -1,13 +1,12 @@
 from __future__ import division, print_function
+
 import numpy as np
 import progressbar
 
-from mlfromscratch.utils import train_test_split, standardize, to_categorical, normalize
-from mlfromscratch.utils import mean_squared_error, accuracy_score
-from mlfromscratch.supervised_learning import XGBoostRegressionTree
 from mlfromscratch.deep_learning.activation_functions import Sigmoid
+from mlfromscratch.supervised_learning import XGBoostRegressionTree
+from mlfromscratch.utils import to_categorical
 from mlfromscratch.utils.misc import bar_widgets
-from mlfromscratch.utils import Plot
 
 
 class LogisticLoss():

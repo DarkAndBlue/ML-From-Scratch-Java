@@ -1,10 +1,9 @@
 
 from __future__ import division, print_function
-import numpy as np
+
 import cvxopt
-from mlfromscratch.utils import train_test_split, normalize, accuracy_score
+
 from mlfromscratch.utils.kernels import *
-from mlfromscratch.utils import Plot
 
 # Hide cvxopt output
 cvxopt.solvers.options['show_progress'] = False

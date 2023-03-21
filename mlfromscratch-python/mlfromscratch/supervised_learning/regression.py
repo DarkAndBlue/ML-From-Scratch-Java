@@ -1,7 +1,11 @@
 from __future__ import print_function, division
-import numpy as np
+
 import math
+
+import numpy as np
+
 from mlfromscratch.utils import normalize, polynomial_features
+
 
 class l1_regularization():
     """ Regularization for Lasso Regression """

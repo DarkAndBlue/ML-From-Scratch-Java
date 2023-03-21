@@ -1,9 +1,8 @@
 import logging
 
-import numpy as np
-from sklearn import datasets
-from sklearn.datasets import fetch_mldata
 import matplotlib.pyplot as plt
+import numpy as np
+from sklearn.datasets import fetch_mldata
 
 from mlfromscratch.unsupervised_learning import RBM
 

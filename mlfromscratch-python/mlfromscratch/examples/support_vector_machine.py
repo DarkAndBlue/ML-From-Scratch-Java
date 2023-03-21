@@ -1,11 +1,12 @@
 from __future__ import division, print_function
-import numpy as np
+
 from sklearn import datasets
 
+from mlfromscratch.supervised_learning import SupportVectorMachine
 # Import helper functions
 from mlfromscratch.utils import train_test_split, normalize, accuracy_score, Plot
 from mlfromscratch.utils.kernels import *
-from mlfromscratch.supervised_learning import SupportVectorMachine
+
 
 def main():
     data = datasets.load_iris()

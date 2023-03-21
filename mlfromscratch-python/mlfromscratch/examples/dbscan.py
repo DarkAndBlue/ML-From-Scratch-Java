@@ -1,13 +1,9 @@
-import sys
-import os
-import math
-import random
 from sklearn import datasets
-import numpy as np
 
+from mlfromscratch.unsupervised_learning import DBSCAN
 # Import helper functions
 from mlfromscratch.utils import Plot
-from mlfromscratch.unsupervised_learning import DBSCAN
+
 
 def main():
     # Load the dataset

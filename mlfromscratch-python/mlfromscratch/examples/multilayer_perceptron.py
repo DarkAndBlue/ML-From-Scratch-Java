@@ -1,17 +1,16 @@
 
 from __future__ import print_function
-from sklearn import datasets
+
 import matplotlib.pyplot as plt
 import numpy as np
+from sklearn import datasets
 
 # Import helper functions
 from mlfromscratch.deep_learning import NeuralNetwork
-from mlfromscratch.utils import train_test_split, to_categorical, normalize, Plot
-from mlfromscratch.utils import get_random_subsets, shuffle_data, accuracy_score
-from mlfromscratch.deep_learning.optimizers import StochasticGradientDescent, Adam, RMSprop, Adagrad, Adadelta
-from mlfromscratch.deep_learning.loss_functions import CrossEntropy
-from mlfromscratch.utils.misc import bar_widgets
 from mlfromscratch.deep_learning.layers import Dense, Dropout, Activation
+from mlfromscratch.deep_learning.loss_functions import CrossEntropy
+from mlfromscratch.deep_learning.optimizers import Adam
+from mlfromscratch.utils import train_test_split, to_categorical, Plot
 
 
 def main():

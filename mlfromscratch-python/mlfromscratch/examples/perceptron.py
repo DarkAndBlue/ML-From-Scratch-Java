@@ -1,13 +1,14 @@
 from __future__ import print_function
-from sklearn import datasets
-import numpy as np
 
+import numpy as np
+from sklearn import datasets
+
+from mlfromscratch.deep_learning.activation_functions import Sigmoid
+from mlfromscratch.deep_learning.loss_functions import CrossEntropy
+from mlfromscratch.supervised_learning import Perceptron
+from mlfromscratch.utils import Plot
 # Import helper functions
 from mlfromscratch.utils import train_test_split, normalize, to_categorical, accuracy_score
-from mlfromscratch.deep_learning.activation_functions import Sigmoid
-from mlfromscratch.deep_learning.loss_functions import CrossEntropy 
-from mlfromscratch.utils import Plot
-from mlfromscratch.supervised_learning import Perceptron
 
 
 def main():

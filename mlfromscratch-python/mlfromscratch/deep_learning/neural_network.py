@@ -1,7 +1,9 @@
 from __future__ import print_function, division
-from terminaltables import AsciiTable
+
 import numpy as np
 import progressbar
+from terminaltables import AsciiTable
+
 from mlfromscratch.utils import batch_iterator
 from mlfromscratch.utils.misc import bar_widgets
 

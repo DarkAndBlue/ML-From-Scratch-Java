@@ -1,11 +1,11 @@
 from __future__ import print_function
-import numpy as np
-import matplotlib.pyplot as plt
+
 from sklearn import datasets
 
-from mlfromscratch.utils import train_test_split, normalize, accuracy_score
-from mlfromscratch.utils import euclidean_distance, Plot
 from mlfromscratch.supervised_learning import KNN
+from mlfromscratch.utils import Plot
+from mlfromscratch.utils import train_test_split, normalize, accuracy_score
+
 
 def main():
     data = datasets.load_iris()

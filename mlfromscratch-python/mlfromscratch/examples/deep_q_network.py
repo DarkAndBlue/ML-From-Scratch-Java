@@ -1,10 +1,9 @@
 from __future__ import print_function
-import numpy as np
-from mlfromscratch.utils import to_categorical
-from mlfromscratch.deep_learning.optimizers import Adam
-from mlfromscratch.deep_learning.loss_functions import SquareLoss
-from mlfromscratch.deep_learning.layers import Dense, Dropout, Flatten, Activation, Reshape, BatchNormalization
+
 from mlfromscratch.deep_learning import NeuralNetwork
+from mlfromscratch.deep_learning.layers import Dense, Activation
+from mlfromscratch.deep_learning.loss_functions import SquareLoss
+from mlfromscratch.deep_learning.optimizers import Adam
 from mlfromscratch.reinforcement_learning import DeepQNetwork
 
 

@@ -1,8 +1,11 @@
 
 from __future__ import print_function, division
-import math
-import numpy as np
+
 import copy
+import math
+
+import numpy as np
+
 from mlfromscratch.deep_learning.activation_functions import Sigmoid, ReLU, SoftPlus, LeakyReLU, Swish
 from mlfromscratch.deep_learning.activation_functions import TanH, ELU, SELU, Softmax
 

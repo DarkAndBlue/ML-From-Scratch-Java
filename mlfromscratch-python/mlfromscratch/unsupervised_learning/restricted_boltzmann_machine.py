@@ -1,10 +1,9 @@
-import logging
 import numpy as np
 import progressbar
 
-from mlfromscratch.utils.misc import bar_widgets
-from mlfromscratch.utils import batch_iterator
 from mlfromscratch.deep_learning.activation_functions import Sigmoid
+from mlfromscratch.utils import batch_iterator
+from mlfromscratch.utils.misc import bar_widgets
 
 sigmoid = Sigmoid()
 
@@ -79,4 +78,3 @@ class RBM():
         hidden_states = self._sample(positive_hidden)
         negative_visible = sigmoid(hidden_states.dot(self.W.T) + self.v0)
         return negative_visible
-

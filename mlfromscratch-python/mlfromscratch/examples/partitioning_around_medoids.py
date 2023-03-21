@@ -1,9 +1,9 @@
 from sklearn import datasets
-import numpy as np
 
+from mlfromscratch.unsupervised_learning import PAM
 # Import helper functions
 from mlfromscratch.utils import Plot
-from mlfromscratch.unsupervised_learning import PAM
+
 
 def main():
     # Load the dataset

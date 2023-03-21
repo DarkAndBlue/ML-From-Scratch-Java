@@ -1,8 +1,8 @@
 from __future__ import division
+
 from itertools import combinations_with_replacement
+
 import numpy as np
-import math
-import sys
 
 
 def shuffle_data(X, y, seed=None):
