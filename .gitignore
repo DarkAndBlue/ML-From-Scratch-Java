@@ -7,3 +7,5 @@ dist/
 *.py[cod]
 ../.eggs
 *\.png
+/.eggs/
+/mlfromscratch-java/.gradle/
