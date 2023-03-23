@@ -2,7 +2,7 @@ from __future__ import print_function, division
 
 import matplotlib.pyplot as plt
 import numpy as np
-from sklearn.datasets import fetch_mldata
+from sklearn.datasets import fetch_openml
 
 from mlfromscratch.deep_learning import NeuralNetwork
 from mlfromscratch.deep_learning.layers import Dense, Activation, BatchNormalization
@@ -63,10 +63,9 @@ class Autoencoder():
 
     def train(self, n_epochs, batch_size=128, save_interval=50):
 
-        mnist = fetch_mldata('MNIST original')
-
-        X = mnist.data
-        y = mnist.target
+        X, Y = fetch_openml(
+            "mnist_784", version=1, return_X_y=True, as_frame=False, parser="pandas"
+        )
 
         # Rescale [-1, 1]
         X = (X.astype(np.float32) - 127.5) / 127.5
