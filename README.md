@@ -1,4 +1,4 @@
-# Machine Learning From Scratch
+# Machine Learning From Scratch Java
 
 ## About
 Java translation of the https://github.com/eriklindernoren/ML-From-Scratch repositiory
