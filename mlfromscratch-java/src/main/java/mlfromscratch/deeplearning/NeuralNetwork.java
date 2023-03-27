@@ -2,16 +2,14 @@ package mlfromscratch.deeplearning;
 
 import mlfromscratch.StringUtil;
 import mlfromscratch.deeplearning.layer.Layer;
-import mlfromscratch.deeplearning.layer.LossFunction;
-import mlfromscratch.deeplearning.layer.Optimizer;
+import mlfromscratch.deeplearning.layer.lossfunctions.LossFunction;
+import mlfromscratch.deeplearning.layer.optimizer.Optimizer;
 import mlfromscratch.math.NDArray;
 import mlfromscratch.math.Numpy;
 import mlfromscratch.rendering.ProgressBar;
 import mlfromscratch.rendering.WidgetsEnum;
 
-import java.sql.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
@@ -35,13 +33,16 @@ public class NeuralNetwork {
  validation: tuple
      A tuple containing validation data and labels (X, y)
  */
-  public NeuralNetwork(Optimizer optimizer, LossFunction loss, HashMap<String, NDArray> val_set) {
+  public NeuralNetwork(Optimizer optimizer, LossFunction loss, NDArray X_test, NDArray y_test) {
     this.optimizer = optimizer;
     this.layers = new ArrayList<>();
     this.errors = new HashMap<>();
     this.loss_function = loss;
     this.progressbar = new ProgressBar(WidgetsEnum.BAR_WIDGET);
-    
+  
+    HashMap<String, NDArray> val_set = new HashMap<>();
+    val_set.put("X", X_test);
+    val_set.put("y", y_test);
     this.val_set = val_set;
   }
   
@@ -57,7 +58,7 @@ public class NeuralNetwork {
     }
   }
   
-  void add(Layer layer) {
+  public void add(Layer layer) {
     /* Method which adds a layer to the neural network */
     // If this is not the first layer added then set the input shape
     // to the output shape of the last added layer
@@ -94,7 +95,7 @@ public class NeuralNetwork {
     return new Object[] { loss, acc };
   }
   
-  List<Double>[] fit(NDArray X, NDArray y, int n_epochs, int batch_size) {
+  public List<Double>[] fit(NDArray X, NDArray y, int n_epochs, int batch_size) {
     // Trains the model for a fixed number of epochs
     for (int i = 0; i < n_epochs; i++) {
       this.progressbar.setState(i, n_epochs);
@@ -136,7 +137,7 @@ public class NeuralNetwork {
     }
   }
   
-  void summary(String name/*="Model Summary"*/) {
+  public void summary(String name/*="Model Summary"*/) {
     // Print model name
     System.out.println(StringUtil.createStringTable(name));
     // Network input shape (first layer's input shape)
