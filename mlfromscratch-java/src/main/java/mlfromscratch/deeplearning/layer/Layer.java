@@ -1,6 +1,6 @@
 package mlfromscratch.deeplearning.layer;
 
-import mlfromscratch.deeplearning.layer.optimizer.Optimizer;
+import mlfromscratch.deeplearning.layer.optimizers.Optimizer;
 import mlfromscratch.math.NDArray;
 
 public abstract class Layer {

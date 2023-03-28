@@ -3,7 +3,7 @@ package mlfromscratch.deeplearning;
 import mlfromscratch.StringUtil;
 import mlfromscratch.deeplearning.layer.Layer;
 import mlfromscratch.deeplearning.layer.lossfunctions.LossFunction;
-import mlfromscratch.deeplearning.layer.optimizer.Optimizer;
+import mlfromscratch.deeplearning.layer.optimizers.Optimizer;
 import mlfromscratch.math.NDArray;
 import mlfromscratch.math.Numpy;
 import mlfromscratch.rendering.ProgressBar;

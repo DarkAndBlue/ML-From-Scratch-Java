@@ -16,6 +16,7 @@ class StochasticGradientDescent():
         # If not initialized
         if self.w_updt is None:
             self.w_updt = np.zeros(np.shape(w))
+        a = np.shape(w)
         # Use momentum if set
         self.w_updt = self.momentum * self.w_updt + (1 - self.momentum) * grad_wrt_w
         # Move against the gradient to minimize loss
@@ -101,7 +102,7 @@ class RMSprop():
 
         # Divide the learning rate for a weight by a running average of the magnitudes of recent
         # gradients for that weight
-        return w - self.learning_rate *  grad_wrt_w / np.sqrt(self.Eg + self.eps)
+        return w - self.learning_rate * grad_wrt_w / np.sqrt(self.Eg + self.eps)
 
 class Adam():
     def __init__(self, learning_rate=0.001, b1=0.9, b2=0.999):

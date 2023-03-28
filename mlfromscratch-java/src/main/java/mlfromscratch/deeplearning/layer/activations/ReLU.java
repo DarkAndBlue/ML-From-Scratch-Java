@@ -1,4 +1,4 @@
 package mlfromscratch.deeplearning.layer.activations;
 
-public class ReLU {
+public class ReLU extends ActivationFunction {
 }

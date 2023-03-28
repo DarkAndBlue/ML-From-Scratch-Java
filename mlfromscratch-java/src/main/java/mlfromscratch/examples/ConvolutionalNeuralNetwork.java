@@ -4,9 +4,9 @@ import mlfromscratch.deeplearning.Datasets;
 import mlfromscratch.deeplearning.NeuralNetwork;
 import mlfromscratch.deeplearning.layer.activations.ReLU;
 import mlfromscratch.deeplearning.layer.layers.*;
-import mlfromscratch.deeplearning.layer.optimizer.Optimizer;
+import mlfromscratch.deeplearning.layer.optimizers.Optimizer;
 import mlfromscratch.deeplearning.layer.lossfunctions.CrossEntropy;
-import mlfromscratch.deeplearning.layer.optimizer.Adam;
+import mlfromscratch.deeplearning.layer.optimizers.Adam;
 import mlfromscratch.math.NDArray;
 import mlfromscratch.rendering.Plot;
 
@@ -50,7 +50,7 @@ public class ConvolutionalNeuralNetwork {
     clf.add(new Dropout(0.25));
     clf.add(new BatchNormalization());
     clf.add(new Conv2D(/*n_filters=*/32, /*filter_shape=*/new double[] {3, 3}, /*stride*/1, /*padding*/"same"));
-    clf.add(new ReLU();
+    clf.add(new ReLU());
     clf.add(new Dropout(0.25));
     clf.add(new BatchNormalization());
     clf.add(new Flatten());
