@@ -4,7 +4,7 @@ import mlfromscratch.StringUtil;
 import mlfromscratch.deeplearning.layer.Layer;
 import mlfromscratch.deeplearning.layer.lossfunctions.LossFunction;
 import mlfromscratch.deeplearning.layer.optimizers.Optimizer;
-import mlfromscratch.math.NDArray;
+import mlfromscratch.math.ndarray.NDArray;
 import mlfromscratch.math.Numpy;
 import mlfromscratch.rendering.ProgressBar;
 import mlfromscratch.rendering.WidgetsEnum;
@@ -16,7 +16,7 @@ import java.util.List;
 public class NeuralNetwork {
   Optimizer optimizer;
   List<Layer> layers;
-  HashMap<String, ArrayList<Double>> errors; // "training" and "validation" errors inside NDArray
+  HashMap<String, ArrayList<Float>> errors; // "training" and "validation" errors inside NDArray
   LossFunction loss_function;
   ProgressBar progressbar;
   HashMap<String, NDArray> val_set;
@@ -46,9 +46,9 @@ public class NeuralNetwork {
     this.val_set = val_set;
   }
   
-  public NeuralNetwork(Optimizer optimizer, LossFunction loss) {
-    this(optimizer, loss, null);
-  }
+//  public NeuralNetwork(Optimizer optimizer, LossFunction loss) {
+//    this(optimizer, loss, null, null);
+//  }
   
   // TODO: maybe replace the trainable boolean with stopping the training threads later
   void set_trainable(boolean trainable) {
@@ -76,7 +76,7 @@ public class NeuralNetwork {
   Object[] test_on_batch(NDArray X, NDArray y) {
     // Evaluates the model over a single batch of samples
     NDArray y_pred = this._forward_pass(X, false/*training = False*/);
-    double loss = Numpy.mean(this.loss_function.loss(y, y_pred));
+    float loss = Numpy.mean(this.loss_function.loss(y, y_pred));
     NDArray acc = this.loss_function.acc(y, y_pred);
     
     return new Object[] { loss, acc };
@@ -99,19 +99,19 @@ public class NeuralNetwork {
     // Trains the model for a fixed number of epochs
     for (int i = 0; i < n_epochs; i++) {
       this.progressbar.setState(i, n_epochs);
-      NDArray batch_error = new NDArray();
+      List<Float> batch_error = new ArrayList<>();
       for(NDArray[] element : DataManipulation.batch_iterator(X, y, batch_size)) {
         NDArray X_batch = element[0];
         NDArray y_batch = element[1];
-        double loss = (Double) this.train_on_batch(X_batch, y_batch)[0];
-        batch_error.append(loss);
+        float loss = (Float) this.train_on_batch(X_batch, y_batch)[0];
+        batch_error.add(loss);
       }
       
       this.errors.get("training").add(Numpy.mean(batch_error));
       
       if(this.val_set != null) {
         Object[] result = this.test_on_batch(this.val_set.get("X"), this.val_set.get("y"));
-        double val_loss = (Double) result[0];
+        float val_loss = (Float) result[0];
         this.errors.get("validation").add(val_loss);
       }
     }

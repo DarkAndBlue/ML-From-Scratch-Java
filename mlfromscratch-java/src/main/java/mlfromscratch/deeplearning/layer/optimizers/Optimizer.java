@@ -1,6 +1,6 @@
 package mlfromscratch.deeplearning.layer.optimizers;
 
-import mlfromscratch.math.NDArray;
+import mlfromscratch.math.ndarray.NDArray;
 
 public abstract class Optimizer {
   public double learning_rate;

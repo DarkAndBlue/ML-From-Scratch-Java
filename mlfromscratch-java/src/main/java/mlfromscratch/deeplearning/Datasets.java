@@ -1,6 +1,6 @@
 package mlfromscratch.deeplearning;
 
-import mlfromscratch.math.NDArray;
+import mlfromscratch.math.ndarray.NDArray;
 
 public class Datasets {
   public static Data load_digits() {

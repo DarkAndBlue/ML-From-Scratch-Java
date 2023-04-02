@@ -7,7 +7,7 @@ import mlfromscratch.deeplearning.layer.layers.*;
 import mlfromscratch.deeplearning.layer.optimizers.Optimizer;
 import mlfromscratch.deeplearning.layer.lossfunctions.CrossEntropy;
 import mlfromscratch.deeplearning.layer.optimizers.Adam;
-import mlfromscratch.math.NDArray;
+import mlfromscratch.math.ndarray.NDArray;
 import mlfromscratch.rendering.Plot;
 
 import java.util.List;

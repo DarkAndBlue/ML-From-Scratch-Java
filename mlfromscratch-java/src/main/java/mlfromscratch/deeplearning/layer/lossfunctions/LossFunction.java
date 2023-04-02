@@ -1,7 +1,7 @@
 package mlfromscratch.deeplearning.layer.lossfunctions;
 
 import mlfromscratch.deeplearning.layer.Layer;
-import mlfromscratch.math.NDArray;
+import mlfromscratch.math.ndarray.NDArray;
 
 public abstract class LossFunction extends Layer {
   public abstract NDArray acc(NDArray y, NDArray yPred);

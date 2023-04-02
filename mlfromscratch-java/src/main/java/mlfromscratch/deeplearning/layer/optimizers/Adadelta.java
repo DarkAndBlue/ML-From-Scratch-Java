@@ -1,7 +1,8 @@
 package mlfromscratch.deeplearning.layer.optimizers;
 
-import mlfromscratch.math.NDArray;
+import mlfromscratch.math.ndarray.NDArray;
 import mlfromscratch.math.Numpy;
+import mlfromscratch.math.ndarray.Vector;
 
 public class Adadelta extends Optimizer {
   NDArray E_w_updt;
@@ -25,9 +26,9 @@ public class Adadelta extends Optimizer {
       this.E_w_updt = Numpy.zeros(Numpy.shape(w));
       this.E_grad = Numpy.zeros(Numpy.shape(grad_wrt_w));
     }
-    
+  
     // Update average of gradients at w
-    this.E_grad = NDArray.of(this.rho).dot(this.E_grad).add(NDArray.of(1 - this.rho).dot(Numpy.power(grad_wrt_w, 2)));
+    this.E_grad = this.E_grad.multiply(this.rho).add(NDArray.of(1 - this.rho).multiply(Numpy.power(grad_wrt_w, 2)));
   
     NDArray RMS_delta_w = Numpy.sqrt(this.E_w_updt.add(NDArray.of(this.eps)));
     NDArray RMS_grad = Numpy.sqrt(this.E_grad.add(NDArray.of(this.eps)));

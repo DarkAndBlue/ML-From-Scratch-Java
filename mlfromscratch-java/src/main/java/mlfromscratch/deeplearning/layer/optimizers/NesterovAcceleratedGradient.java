@@ -1,9 +1,8 @@
 package mlfromscratch.deeplearning.layer.optimizers;
 
-import mlfromscratch.math.NDArray;
+import mlfromscratch.math.ndarray.NDArray;
 import mlfromscratch.math.Numpy;
 
-import java.util.Arrays;
 import java.util.function.Function;
 
 // Nesterov Accelerated Gradient

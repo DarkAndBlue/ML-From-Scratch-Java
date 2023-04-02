@@ -1,10 +1,14 @@
 package mlfromscratch.math;
 
+import mlfromscratch.math.ndarray.NDArray;
+
+import java.util.List;
+
 public class Numpy {
   // for importing the class staticly
   //public static Numpy np = new Numpy();
   
-  public static double mean(NDArray input) {
+  public static float mean(NDArray input) {
     // TODO: implement this method
   }
   
@@ -24,5 +28,12 @@ public class Numpy {
   }
   
   public static NDArray sqrt(NDArray add) {
+  }
+  
+  public static NDArray subtract(Number number, NDArray other) {
+    
+  }
+  
+  public static float mean(List<Float> values) {
   }
 }

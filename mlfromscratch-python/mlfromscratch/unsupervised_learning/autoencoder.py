@@ -22,8 +22,8 @@ class Autoencoder():
         self.img_dim = self.img_rows * self.img_cols
         self.latent_dim = 128 # The dimension of the data embedding
 
-        #optimizer = Adam(learning_rate=0.0002, b1=0.5)
-        optimizer = StochasticGradientDescent(learning_rate=0.0003)
+        optimizer = Adam(learning_rate=0.0002, b1=0.5)
+        #optimizer = StochasticGradientDescent(learning_rate=0.0003)
         loss_function = SquareLoss
 
         self.encoder = self.build_encoder(optimizer, loss_function)
