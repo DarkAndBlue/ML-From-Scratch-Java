@@ -5,7 +5,7 @@ import mlfromscratch.math.Numpy;
 
 public class Adagrad extends Optimizer {
   private NDArray G; // Sum of squares of the gradients
-  private final double eps = 0.00000001d;
+  private final float eps = 0.00000001f;
   
   public Adagrad(double learning_rate) {
     this.learning_rate = learning_rate;
@@ -19,6 +19,6 @@ public class Adagrad extends Optimizer {
     // Add the square of the gradient of the loss function at w
     this.G = this.G.add(Numpy.power(grad_wrt_w, 2));
     // Adaptive gradient with higher learning rate for sparse data
-    return w.subtract(NDArray.of(this.learning_rate).dot(grad_wrt_w).divide(Numpy.sqrt(this.G.add(NDArray.of(this.eps)))));
+    return w.subtract(NDArray.of(this.learning_rate).multiply(grad_wrt_w).divide(Numpy.sqrt(this.G.add(NDArray.of(this.eps)))));
   }
 }

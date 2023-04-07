@@ -8,10 +8,10 @@ public class Adadelta extends Optimizer {
   NDArray E_w_updt;
   NDArray E_grad;
   NDArray w_updt;
-  double eps;
-  double rho;
+  float eps;
+  float rho;
   
-  public Adadelta(double rho/*=0.95*/, double eps/*=1e-6*/) {
+  public Adadelta(float rho/*=0.95*/, float eps/*=1e-6*/) {
     this.E_w_updt = null; //Running average of squared parameter updates
     this.E_grad = null;   //Running average of the squared gradient of w
     this.w_updt = null;   //Parameter update
@@ -37,10 +37,10 @@ public class Adadelta extends Optimizer {
     NDArray adaptive_lr = RMS_delta_w.divide(RMS_grad);
     
     // Calculate the update
-    this.w_updt = adaptive_lr.dot(grad_wrt_w);
+    this.w_updt = adaptive_lr.multiply(grad_wrt_w);
     
     // Update the running average of w updates
-    this.E_w_updt = NDArray.of(this.rho).dot(this.E_w_updt).add(NDArray.of(1 - this.rho).dot(Numpy.power(this.w_updt, 2)));
+    this.E_w_updt = NDArray.of(this.rho).multiply(this.E_w_updt).add(NDArray.of(1 - this.rho).multiply(Numpy.power(this.w_updt, 2)));
     
     return w.subtract(this.w_updt);
   }

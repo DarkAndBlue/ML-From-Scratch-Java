@@ -5,7 +5,6 @@ import mlfromscratch.math.ndarray.NDArray;
 public class Datasets {
   public static Data load_digits() {
     // TODO implement
-    throw new RuntimeException("Not implemented yet!");
   }
   
   public class Data {

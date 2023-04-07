@@ -8,6 +8,8 @@ public class NDArray {
   public final int rows;
   public final int cols;
   public final float[][] data;
+  public static NDArray ONE = new NDArray(1);
+  public static NDArray ZERO = new NDArray(1);
   
   // TODO: most classes have .dot instead of .multiply because I was stupid (compare again with all python code and replace * with .multiply and not .dot)
   public NDArray(int rows, int cols) {
@@ -23,6 +25,10 @@ public class NDArray {
     this.rows = data.length;
     this.cols = data[0].length;
   }
+  
+  public NDArray(float... array1d) {
+    this(new float[][] {array1d});
+  }
 
 //  public NDArray(Number... data) {
 //    this(Arrays.stream(data).map(Number::floatValue).toArray(float[][]::new));
@@ -34,6 +40,10 @@ public class NDArray {
   
   public static NDArray of(float[][] array2D) {
     return new NDArray(array2D);
+  }
+  
+  public static NDArray of(float... array1d) {
+    return new NDArray(array1d);
   }
   
   public NDArray flat() { // TODO: check if this is correct. The flat function convets [[ 1, 2 ], [[4]] to [1, 2, 4] but idk if one dimensional ndarray is a [[1, 2, 4]] in my implementation
@@ -95,9 +105,9 @@ public class NDArray {
   }
   
   // TODO: A problem is that the python code uses 4 dimensional arrays which is hard to implement with this self made library
-  public NDArray reshape(int i, int i1, int i2, int i3) {
-    
-  }
+//  public NDArray reshape(int i, int i1, int i2, int i3) {
+//    
+//  }
   
   /*
     https://numpy.org/doc/stable/reference/generated/numpy.multiply.html#numpy-multiply
