@@ -7,7 +7,7 @@ public class Adagrad extends Optimizer {
   private NDArray G; // Sum of squares of the gradients
   private final float eps = 0.00000001f;
   
-  public Adagrad(double learning_rate) {
+  public Adagrad(float learning_rate) {
     this.learning_rate = learning_rate;
   }
   

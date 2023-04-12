@@ -2,6 +2,7 @@ package mlfromscratch.deeplearning;
 
 import mlfromscratch.StringUtil;
 import mlfromscratch.deeplearning.layer.Layer;
+import mlfromscratch.deeplearning.layer.layers.Initializable;
 import mlfromscratch.deeplearning.layer.lossfunctions.LossFunction;
 import mlfromscratch.deeplearning.layer.optimizers.Optimizer;
 import mlfromscratch.math.ndarray.NDArray;
@@ -10,6 +11,7 @@ import mlfromscratch.rendering.ProgressBar;
 import mlfromscratch.rendering.WidgetsEnum;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
@@ -63,11 +65,11 @@ public class NeuralNetwork {
     // If this is not the first layer added then set the input shape
     // to the output shape of the last added layer
     if (!this.layers.isEmpty())
-      layer.setInputShape(this.layers.get(this.layers.size() - 1).outputShape());
+      layer.set_input_shape(this.layers.get(this.layers.size() - 1).output_shape());
     
     // If the layer has weights that needs to be initialized 
-    if (hasAttr(layer, "initialize"))
-      layer.initialize(this.optimizer);
+    if (layer instanceof Initializable)
+      ((Initializable) layer).initialize(this.optimizer);
     
     // Add layer to the network
     this.layers.add(layer);
@@ -141,7 +143,7 @@ public class NeuralNetwork {
     // Print model name
     System.out.println(StringUtil.createStringTable(name));
     // Network input shape (first layer's input shape)
-    System.out.println("Input Shape: " + this.layers.get(0).input_shape);
+    System.out.println("Input Shape: " + Arrays.toString(this.layers.get(0).input_shape));
     // Iterate through network and get each layer's configuration
     String[][] table_data = new String[this.layers.size()][];
     table_data[0] = new String[] { "Layer Type", "Parameters", "Output Shape" };
@@ -150,8 +152,8 @@ public class NeuralNetwork {
       Layer layer = this.layers.get(i);
       String layer_name = layer.layer_name();
       int params = layer.parameters();
-      NDArray out_shape = layer.output_shape();
-      table_data[i] = new String[] { layer_name, "" + params, out_shape.toString() };
+      int[] out_shape = layer.output_shape();
+      table_data[i] = new String[] { layer_name, "" + params, Arrays.toString(out_shape) };
       tot_params += params;
     }
     // Print network configuration table

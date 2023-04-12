@@ -42,6 +42,7 @@ public class NDArray {
     return new NDArray(array2D);
   }
   
+  // TODO: at refector time create for each NDArray operator like "multiply" or "divide" a new function for using primitive floats instead of NDArray.ONE or NDArray.of(1)
   public static NDArray of(float... array1d) {
     return new NDArray(array1d);
   }
@@ -337,5 +338,9 @@ public class NDArray {
   
   public String dimension() {
     return "[[" + rows + "], [" + cols + "]]";
+  }
+  
+  // Does -NDArray or NDArray * -1
+  public NDArray invert() {
   }
 }

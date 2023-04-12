@@ -3,18 +3,19 @@ package mlfromscratch.deeplearning.layer.activations;
 import mlfromscratch.math.Numpy;
 import mlfromscratch.math.ndarray.NDArray;
 
-public class ReLU extends Activation {
-  public ReLU(String name) {
+public class Sigmoid extends Activation {
+  
+  public Sigmoid(String name) {
     super(name);
   }
   
   @Override
   public NDArray __call__(NDArray x) {
-    return Numpy.where((a) -> a >= 0, x, 0);
+    return NDArray.ONE.divide(NDArray.ONE.add(Numpy.exp(x.invert())));
   }
   
   @Override
-  public NDArray activation_func_gradient(NDArray x) {
-    return Numpy.where((a) -> a >= 0, x, 1, 0);
+  public NDArray activation_func_gradient(NDArray X) {
+    return null;
   }
 }

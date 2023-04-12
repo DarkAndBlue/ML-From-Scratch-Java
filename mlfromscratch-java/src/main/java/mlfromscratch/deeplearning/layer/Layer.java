@@ -1,16 +1,20 @@
 package mlfromscratch.deeplearning.layer;
 
-import mlfromscratch.deeplearning.layer.optimizers.Optimizer;
 import mlfromscratch.math.ndarray.NDArray;
 
 public abstract class Layer {
-  public int input_shape;
+  public int[] input_shape;
+  public NDArray layer_input;
   
-  public abstract void initialize(Optimizer optimizer);
+  public Layer(boolean trainable) {
+    this.trainable = trainable;
+  }
   
-  public abstract void setInputShape(int[] shape);
+  public void set_input_shape(int[] shape) {
+    this.input_shape = shape;
+  }
   
-  public abstract int[] outputShape();
+  public abstract int[] output_shape();
   
   // indicates if the layer weights are freezed
   public boolean trainable;
@@ -23,7 +27,8 @@ public abstract class Layer {
     return this.getClass().getSimpleName(); // TODO: might be not the right class
   }
   
-  public abstract int parameters();
-  
-  public abstract NDArray output_shape();
+  // Returns the number of parameters for the layer. TODO: make it abstract when refactoring because it could be missed when implementing a new layer. 
+  public int parameters() {
+    return 0;
+  }
 }
