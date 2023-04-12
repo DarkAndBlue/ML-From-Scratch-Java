@@ -6,5 +6,7 @@ public abstract class Optimizer {
   public float learning_rate;
   public NDArray w_updt;
   
-  abstract NDArray update(NDArray w, NDArray gradWrtW);
+  public abstract NDArray update(NDArray w, NDArray gradWrtW);
+  
+  public abstract Optimizer copy();
 }

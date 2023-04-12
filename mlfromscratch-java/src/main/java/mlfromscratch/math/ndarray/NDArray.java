@@ -10,6 +10,7 @@ public class NDArray {
   public final float[][] data;
   public static NDArray ONE = new NDArray(1);
   public static NDArray ZERO = new NDArray(1);
+  public final int[] shape; // for NDArray parity
   
   // TODO: most classes have .dot instead of .multiply because I was stupid (compare again with all python code and replace * with .multiply and not .dot)
   public NDArray(int rows, int cols) {
@@ -17,6 +18,8 @@ public class NDArray {
     this.cols = cols;
     
     this.data = new float[rows][cols];
+    
+    this.shape = new int[] { rows, cols };
   }
   
   public NDArray(float[][] data) {
@@ -24,6 +27,8 @@ public class NDArray {
     
     this.rows = data.length;
     this.cols = data[0].length;
+    
+    this.shape = new int[] { rows, cols };
   }
   
   public NDArray(float... array1d) {
@@ -342,5 +347,17 @@ public class NDArray {
   
   // Does -NDArray or NDArray * -1
   public NDArray invert() {
+  }
+  
+  
+  /*
+  Represents the ndarray.T feature of Numpy
+  https://numpy.org/doc/stable/reference/generated/numpy.ndarray.T.html
+  */
+  public NDArray transpose() {
+  }
+  
+  // Makes a deep Copy of the object
+  public NDArray copy() {
   }
 }

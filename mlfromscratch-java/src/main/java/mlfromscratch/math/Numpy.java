@@ -2,12 +2,22 @@ package mlfromscratch.math;
 
 import mlfromscratch.math.ndarray.NDArray;
 
-import java.util.Comparator;
 import java.util.List;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class Numpy {
+  public static Random random;
+  public class Random {
+    public static NDArray uniform(float from, float to, float idk, float idk2) {
+      
+    }
+  }
+  
+  public static int prod(int[] array) { // TODO: is the input "int[]" correct?
+    
+  }
+  
   // for importing the class staticly
   //public static Numpy np = new Numpy();
   
